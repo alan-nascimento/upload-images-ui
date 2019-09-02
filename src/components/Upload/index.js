@@ -11,7 +11,9 @@ export default class Upload extends Component {
     }
 
     if (isDragReject) {
-      return <UploadMessage type="error">This file is not supported</UploadMessage>;
+      return (
+        <UploadMessage type="error">This file is not supported</UploadMessage>
+      );
     }
 
     return <UploadMessage type="success">Drop your images here</UploadMessage>;
