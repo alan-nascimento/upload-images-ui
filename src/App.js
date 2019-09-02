@@ -11,13 +11,17 @@ export default class App extends Component {
     uploadedFiles: []
   };
 
+  handleUpload = files => {
+    console.log(files);
+  };
+
   componentDidMount() {}
 
   render() {
     return (
       <Container>
         <Content>
-          <Upload />
+          <Upload onUpload={this.handleUpload} />
           <FileList />
         </Content>
         <GlobalStyle />
